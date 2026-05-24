@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Alegreya';
+  src: url('/assets/fonts/alegreya/Alegreya-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JSL Ancient';
+  src: url('/assets/fonts/jsl_ancient/jancient.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-body: 'Alegreya', serif;
+  --font-header: 'JSL Ancient', serif;
+
+  --black: #000;
+  --yellow: #FFE900;
+  --pink: #FF3EB5;
+  --white: #fff;
+
+  --black-400: #333333;
+  --black-300: #666666;
+  --black-200: #999999;
+  --black-100: #CCCCCC;
+
+  --yellow-900: #332f00;
+  --yellow-800: #665d00;
+  --yellow-700: #998c00;
+  --yellow-600: #ccba00;
+  --yellow-400: #ffed33;
+  --yellow-300: #fff266;
+  --yellow-200: #fff699;
+  --yellow-100: #fffbcc;
+
+  --pink-900: #330c24;
+  --pink-800: #661948;
+  --pink-700: #99256d;
+  --pink-600: #cc3291;
+  --pink-400: #ff65c4;
+  --pink-300: #ff8bd3;
+  --pink-200: #ffb2e1;
+  --pink-100: #ffd8f0;
+}
