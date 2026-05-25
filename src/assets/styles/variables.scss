@@ -1,7 +1,21 @@
 @font-face {
   font-family: 'Alegreya';
   src: url('/assets/fonts/alegreya/Alegreya-Regular.otf') format('opentype');
-  font-weight: normal;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  src: url('/assets/fonts/alegreya/Alegreya-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  src: url('/assets/fonts/alegreya/Alegreya-Black.otf') format('opentype');
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -12,9 +26,25 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Gothicus';
+  src: url('/assets/fonts/gothicus/Gothicus_Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calling Code';
+  src: url('/assets/fonts/calling_code/CallingCode-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
-  --font-body: 'Alegreya', serif;
-  --font-header: 'JSL Ancient', serif;
+  --font-body: 'Alegreya';
+  --font-header: 'JSL Ancient';
+  --font-fancy-header: 'Gothicus';
+  --font-monotype: 'Calling Code';
 
   --black: #000;
   --yellow: #FFE900;

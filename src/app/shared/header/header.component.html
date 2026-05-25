@@ -1,0 +1,13 @@
+<div class="header-container">
+  @if (previousPage) {
+    <a class="back-button" type="button" [routerLink]="previousPage">
+      <span class="material-icons">arrow_back</span>
+    </a>
+  }
+
+  <h1>{{ title }}</h1>
+
+  @if(previousPage) {
+    <div class="placeholder"></div>
+  }
+</div>

@@ -1,0 +1,27 @@
+:host {
+  width: 100%;
+}
+.header-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+
+  > .back-button {
+    background-color: transparent;
+    padding: 4px 4px 0px;
+    border: none;
+    cursor: pointer;
+    color: var(--black);
+
+    &:hover {
+      background-color: var(--white);
+    }
+
+    &:active {
+      background-color: var(--yellow-100);
+    }
+  }
+}
