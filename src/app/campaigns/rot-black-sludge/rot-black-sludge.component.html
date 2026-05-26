@@ -1,13 +1,15 @@
 <app-header [title]="pageName" previousPage="/" />
+<div class="multi-button-selector nav">
+  <button class="selector-button">Dungeon Map</button>
+</div>
 <div class="campaign-content">
-  <div class="multi-button-selector nav">
-    <button class="selector-button">Dungeon Map</button>
-  </div>
+
+  <app-map />
+
   <div class="content-column">
     <p>
       This is a campaign manager for the Rot Black Sludge campaign. It is still in development, but it will eventually be a tool for managing the campaign, including tracking characters, locations, and events.
     </p>
-    <router-outlet />
   </div>
 </div>
 
