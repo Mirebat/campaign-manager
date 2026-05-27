@@ -4,12 +4,47 @@
 </div>
 <div class="campaign-content">
 
-  <app-map />
+  <app-map (roomClicked)="setActiveRoom($event)" />
 
   <div class="content-column">
-    <p>
-      This is a campaign manager for the Rot Black Sludge campaign. It is still in development, but it will eventually be a tool for managing the campaign, including tracking characters, locations, and events.
-    </p>
+    @if(!activeRoom()) {
+      <p>
+        This is a campaign manager for the Rot Black Sludge campaign. It is still in development, but it will eventually be a tool for managing the campaign, including tracking characters, locations, and events.
+      </p>
+    } @else if(activeRoom()) {
+      <div>
+        <h2>{{ activeRoom().name }}</h2>
+        <p>{{ activeRoom().description }}</p>
+      </div>
+
+      <div class="room-content-list">
+        @for (item of activeRoom().items; track item.id) {
+          <div><span><span class="bold">{{ item.name }}</span> {{ item.inScenario }}</span></div>
+        } @empty {
+          <div><span>The room is barren</span></div>
+        }
+        @for (detail of activeRoom().details; track detail) {
+          <div><span>{{ detail }}</span></div>
+        }
+        @for (interactable of activeRoom().interactables; track interactable.id) {
+          <div>
+            <span>
+              <span class="bold">{{ interactable.name }}</span> {{ interactable.description }}<br>
+              <span class="interaction">{{ interactable.interaction }}</span>
+            </span>
+          </div>
+        }
+        @for (connection of activeRoom().connections; track connection.id) {
+          <div><span><span class="underline">{{ connection.direction }}</span>: {{ connection.description }}</span></div>
+        } @empty {
+          <div><span>No connecting rooms</span></div>
+        }
+      </div>
+
+      @for(danger of activeRoom().dangers; track danger) {
+        <div class="warning-badge">{{ danger }}</div>
+      }
+    }
   </div>
 </div>
 

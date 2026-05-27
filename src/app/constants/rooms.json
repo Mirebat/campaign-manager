@@ -1,0 +1,76 @@
+[
+  {
+    "id": "1",
+    "name": "Entrance",
+    "description": "stale smell.",
+    "items": [
+      {
+        "id": "2666a3da-57e0-4df9-b34f-d2100520b0a1",
+        "name": "lit oil lantern",
+        "quantity": "1",
+        "value": "10s",
+        "inScenario": "hangs from the ceiling"
+      }
+    ],
+    "details": [
+      "a small stream of water crosses the room from holes in the walls."
+    ],
+    "interactables": [
+      {
+        "id": "3130ce09-86a6-4322-9f36-1c7aa28fbd4b",
+        "name": "black-violet butterflies",
+        "description": "flap haplessly over the water",
+        "interaction": "eat the butterflies: heal d6 hp"
+      }
+    ],
+    "connections": [
+      {
+        "id": "2,3",
+        "direction": "north",
+        "description": "two wooden doors ajar. faint violin music can be heard from behind both."
+      },
+      {
+        "id": "0",
+        "direction": "south",
+        "description": "flight of stairs leading back outside"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Dining Room",
+    "description": "warm and bright. rotten smell. faint, sad violin music from the north.",
+    "connections": [
+      {
+        "id": "6",
+        "direction": "north",
+        "description": "quiet door to the north"
+      },
+      {
+        "id": "4",
+        "direction": "east",
+        "description": "creaking door to the guard room. the guards audibly complain and move about"
+      },
+      {
+        "id": "1",
+        "direction": "south",
+        "description": "wooden door to the entrance"
+      }
+    ],
+    "details": [
+      "4 giant oil lamps.",
+      "large wooden table with 20 chairs. set with mugs, plates and spoons but no food or drink"
+    ],
+    "interactables": [
+      {
+        "id": "4ea18b8c-0bbe-4fbe-8cee-787f8f155a40",
+        "name": "a bearded man",
+        "description": "sits at the far end of the table. skin ashen grey, eyes dark, dressed in a dusty old cloak. it is impossible to communicate or contact him. you can poke, hit, or attack him without response.",
+        "interaction": "if everyone is seated at the table: the man comes to his senses and erupts with rumbling laughter. he tells stories of old for a few minutes but slowly and irrevocably regresses into his own world again"
+      }
+    ],
+    "dangers": [
+      "the guards in room 4 hear any noise made here."
+    ]
+  }
+]

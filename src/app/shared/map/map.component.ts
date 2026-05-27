@@ -1,5 +1,7 @@
 import { Component, AfterViewInit, Output, EventEmitter} from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { Room } from "../../models/data.model";
+import data from '../../constants/rooms.json';
 
 @Component({
   selector: 'app-map',
@@ -9,23 +11,33 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   styleUrl: './map.component.scss'
 })
 export class MapComponent {
-  @Output() roomClicked = new EventEmitter<any>();
+  @Output() roomClicked = new EventEmitter<Room>();
   //originIndicator: HTMLElement | null = null;
-  mapLayout: HTMLElement | null = null;
+  //mapLayout: HTMLElement | null = null;
   //zoomedRoom: HTMLElement | null = null;
+  roomData: any = data;
 
-  ngAfterViewInit() {
-    //this.originIndicator = document.getElementById('origin-indicator');
-    this.mapLayout = document.querySelector('.map-layout') as HTMLElement;
+  ngOnInit() {
+    console.log('MapComponent initialized with room data:', this.roomData);
   }
 
   clickRoom(event: MouseEvent) {
     const target = event.target as HTMLElement;
     const room = target.closest('.room') as HTMLElement;
 
-    if(!this.mapLayout) this.mapLayout = document.querySelector('.map-layout') as HTMLElement;
+    //if(!this.mapLayout) this.mapLayout = document.querySelector('.map-layout') as HTMLElement;
 
     if (room) {
+      let roomId = room.getAttribute('data-room-id');
+      console.log(`Clicked on room with id: ${roomId}`);
+      let targetRoom = this.roomData.find((r: any) => r.id === roomId);
+      if (targetRoom) {
+        console.log(`Emitting room data for room id ${roomId}:`, targetRoom);
+        this.roomClicked.emit(targetRoom);
+      } else {
+        console.warn(`No room data found for room id: ${roomId}`);
+      }
+
       /** Scrapping zooming on rooms for now. **/
       /*
       if(this.zoomedRoom && room == this.zoomedRoom) {
