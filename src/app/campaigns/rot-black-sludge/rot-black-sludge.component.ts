@@ -14,4 +14,8 @@ import { MapComponent } from "../../shared/map/map.component";
 export class RotBlackSludgeComponent {
 
   pageName: string = 'Rot Black Sludge';
+
+  activeRoom: any = null;
+
+  constructor() {}
 }

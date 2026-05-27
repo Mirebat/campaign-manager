@@ -32,4 +32,5 @@
   transform: translate(-50%, -50%); /* Center the dot over the coordinates */
   pointer-events: none; /* Ignore mouse interactions */
   z-index: 10;
+  transition: all 0.3s;
 }
