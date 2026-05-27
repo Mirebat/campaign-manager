@@ -12,6 +12,11 @@ export class HeaderComponent {
 
   @Input() title: string = '';
   @Input() previousPage: string = ''
+  menuOpen: boolean = false;
 
   constructor() {}
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 }

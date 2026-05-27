@@ -8,6 +8,10 @@
   <h1>{{ title }}</h1>
 
   @if(previousPage) {
-    <div class="placeholder"></div>
+    <div class="menu-button" [class.open]="menuOpen" (click)="toggleMenu()">
+      <img src="assets/images/dagger.png" alt="-" />
+      <img src="assets/images/dagger.png" alt="-" />
+      <img src="assets/images/dagger.png" alt="-" />
+    </div>
   }
 </div>
